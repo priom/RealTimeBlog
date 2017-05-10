@@ -10,6 +10,13 @@
 
   <body>
     <div class="container">
+      <% flash.each do |key, message| %>
+          <div class="alert alert-dismissible alert-<%= key == 'notice' ? 'success':'success'%>">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= message %>
+          </div>
+      <% end %>
+
       <%= yield %>
     </div>
   </body>
