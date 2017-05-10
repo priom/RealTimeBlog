@@ -17,22 +17,20 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
-group :development do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
-end
 
 group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.6'
   gem 'byebug', platform: :mri
 
-  gem 'rspec-rails', '~> 3.6'
 end
 
 group :test do
   gem 'capybara', '~> 2.14'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do
