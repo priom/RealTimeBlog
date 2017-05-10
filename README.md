@@ -13,6 +13,7 @@
 * Cloudinary
 * RSpec
 * Capybara
+* Semaphore CI
 
 **Instructions**
 1. git clone
