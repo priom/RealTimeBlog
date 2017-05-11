@@ -15,7 +15,7 @@
 * Cloudinary
 * RSpec
 * Capybara
-  
+
 
 * Semaphore CI
 * CodeClimate
