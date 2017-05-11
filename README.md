@@ -15,7 +15,10 @@
 * Cloudinary
 * RSpec
 * Capybara
+  
+
 * Semaphore CI
+* CodeClimate
 
 **Instructions**
 1. git clone
