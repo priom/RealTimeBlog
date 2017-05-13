@@ -1,1 +1,13 @@
-<%= link_to 'New Article', new_article_path %>
+<% @articles.each do |a| %>
+  <div class="col-md-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to a.title, article_path(a) %></h3>
+      </div>
+      <div class="panel-body">
+        <%= a.body.truncate(200) %>
+        <p><%= button_to 'Read More', article_path(a), class: 'btn btn-info btn-sm', method: :get %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
