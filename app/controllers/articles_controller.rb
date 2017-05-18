@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
+
   def index
     @articles = Article.all
   end
@@ -20,10 +22,26 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
   end
-  
-  
+
+  def edit
+  end
+
+  def update
+    if @article.update(article_params)
+      flash[:success] = 'Article has been updated'
+      redirect_to @article
+    else
+      flash.now[:danger] = 'Article has not been updated'
+      render :edit
+    end
+  end
+
+  def delete
+    
+  end
+
+  # -----------------------------------------------------------------
   protected
 
   def resource_not_found
@@ -33,9 +51,14 @@ class ArticlesController < ApplicationController
   end
 
 
+  # -----------------------------------------------------------------
   private
 
   def article_params
     params.require(:article).permit(:title, :body)
+  end
+
+  def find_article
+    @article = Article.find(params[:id])
   end
 end

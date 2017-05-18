@@ -9,7 +9,7 @@
           </div>
           <div class="panel-body">
             <%= a.body.truncate(200) %>
-            <p><%= button_to 'Read More', article_path(a), class: 'btn btn-info btn-sm', method: :get %></p>
+            <p><%= link_to 'Read More', article_path(a), class: 'btn btn-info btn-sm' %></p>
           </div>
         </div>
       </div>
