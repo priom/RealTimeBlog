@@ -13,6 +13,8 @@
       <p class="lead"><%= @article.body %></p>
     </div>
   </div>
-  <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-info btn-large btn-space' %>
+
+  <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-success btn-large' %>
+  <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-large' %>
 </div>
 
