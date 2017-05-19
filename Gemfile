@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'autoprefixer-rails', '~> 7.0', '>= 7.0.1'
+gem 'devise', '~> 4.2'
+gem 'devise-bootstrap-views', '~> 0.0.11'
 
 
 group :development, :test do
