@@ -9,7 +9,10 @@
           </div>
           <div class="panel-body">
             <%= a.body.truncate(200) %>
-            <p><%= link_to 'Read More', article_path(a), class: 'btn btn-info btn-sm' %></p>
+            <!--<p><%= link_to 'Read More', article_path(a), class: 'btn btn-info btn-sm' %></p>-->
+          </div>
+          <div class="panel-footer">
+            <small>Created by: <%= @article.user.email%></small>
           </div>
         </div>
       </div>
