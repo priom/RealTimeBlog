@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Creating Articles' do
   before do
-    @john = User.create!(email: 'john@doe.com', password: 'johndoe')
+    @john = User.create(email: 'john@doe.com', password: 'johndoe')
     @john.confirm
     login_as(@john)
   end
