@@ -12,7 +12,7 @@ RSpec.feature 'Listing Articles' do
 
   scenario 'With articles created and user signed in' do
     login_as(@john)
-    
+
     visit '/'
 
     expect(page).to have_content(@article1.title)

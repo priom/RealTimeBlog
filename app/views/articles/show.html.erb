@@ -14,7 +14,9 @@
     </div>
   </div>
 
-  <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-success btn-large' %>
-  <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-large' %>
+  <% if user_signed_in? && current_user == @article.user %>
+      <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-success btn-large' %>
+    <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-large' %>
+  <% end %>
 </div>
 
