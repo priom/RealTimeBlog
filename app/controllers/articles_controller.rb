@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = @article.comments.build
-    @comments = @article.comments
+    @comments = @article.comments.order('created_at DESC')
   end
 
   def edit
