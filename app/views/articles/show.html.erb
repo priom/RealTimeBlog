@@ -4,6 +4,7 @@
     <div class="fa fa-calendar">
       <%= @article.created_at.strftime('%b %d, %Y') %>
     </div>
+    <p><%= @article.user.email %></p>
   </div>
 </div>
 
