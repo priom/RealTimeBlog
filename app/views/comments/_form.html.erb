@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <%= form_for [@article, @comment], class: 'form-horizontal', role: 'form' do |f| %>
+  <%= form_for [@article, @comment], remote: true, class: 'form-horizontal', role: 'form' do |f| %>
       <% if @comment.errors.any? %>
           <div class="panel panel-danger col-md-offset-1">
             <div class="panel-heading">

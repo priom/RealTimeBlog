@@ -32,13 +32,15 @@
 
   <div class="col-md-10">
     <% if @article.comments.any? %>
-      <% persisted_comments(@comments).each do |comment| %>
-        <strong><%= comment.body %></strong>
-        <%= time_ago_in_words(comment.created_at) %>
-            ago by <em><%= comment.user.email %></em>
+      <div id="comments">
+        <% persisted_comments(@comments).each do |comment| %>
+          <strong><%= comment.body %></strong>
+          <%= time_ago_in_words(comment.created_at) %>
+              ago by <em><%= comment.user.email %></em>
 
-        <hr>
-      <% end %>
+          <hr>
+        <% end %>
+      </div>
     <% else %>
       <p>No comments has been made yet.</p>
     <% end %>

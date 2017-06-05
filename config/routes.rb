@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   end
 
   root 'articles#index'
+
+  mount ActionCable.server => '/cable'
 end

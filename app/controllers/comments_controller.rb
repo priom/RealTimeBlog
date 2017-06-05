@@ -11,6 +11,9 @@ class CommentsController < ApplicationController
       @comment.user = current_user
 
       if @comment.save
+        ActionCable.server.broadcast 'comments',
+          render(partial: 'comments/comment', object: @comment)
+
         flash[:success] = 'Comment has been added'
       else
         flash[:danger] = 'Error while adding comment. Please try again.'
