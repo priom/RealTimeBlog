@@ -84,9 +84,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'instablogz.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'realtimeblog.herokuapp.com' }
 
-  config.web_socket_server_url = "wss://instablogz.herokuapp.com/cable"
+  config.web_socket_server_url = "wss://realtimeblog.herokuapp.com/cable"
 
-  config.action_cable.allowed_request_origins = ['https://instablogz.herokuapp.com', 'http://instablogz.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://realtimeblog.herokuapp.com', 'http://realtimeblog.herokuapp.com']
 end
