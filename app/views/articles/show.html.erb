@@ -18,5 +18,29 @@
       <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-success btn-large' %>
     <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-large' %>
   <% end %>
+
+  <hr>
+
+  <%= render 'comments/form' %>
+
+  <div class="col-md-12">
+    <header>
+      <h2>Comments</h2>
+    </header>
+  </div>
+
+  <div class="col-md-10">
+    <% if @article.comments.any? %>
+      <% persisted_comments(@comments).each do |comment| %>
+        <%= comment.body %>
+        <%= time_ago_in_words(comment.created_at) %>
+            ago by <%= comment.user.email %>
+
+        <hr>
+      <% end %>
+    <% else %>
+      <p>No comments has been made yet.</p>
+    <% end %>
+  </div>
 </div>
 
