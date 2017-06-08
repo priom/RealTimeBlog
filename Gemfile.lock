@@ -269,7 +269,7 @@ DEPENDENCIES
   pg
   puma (~> 3.0)
   rails (~> 5.0.2)
-  redis (~> 3.0)
+  redis
   rspec-rails (~> 3.6)
   sass-rails (~> 5.0)
   spring
@@ -284,4 +284,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.0
+   1.15.1

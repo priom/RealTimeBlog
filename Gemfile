@@ -15,7 +15,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'redis', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'autoprefixer-rails', '~> 7.0', '>= 7.0.1'
 gem 'devise', '~> 4.2'
@@ -34,6 +33,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'redis'
 end
 
 group :development do
