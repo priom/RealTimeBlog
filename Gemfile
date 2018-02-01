@@ -41,7 +41,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'guard', '~> 2.14', '>= 2.14.1'
+  gem 'guard', '~> 2.14'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
   gem 'guard-cucumber', '~> 2.1', '>= 2.1.2'
 end
