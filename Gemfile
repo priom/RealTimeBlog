@@ -28,7 +28,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '~> 2.14'
+  gem 'capybara', '~> 2.18'
 end
 
 group :production do
